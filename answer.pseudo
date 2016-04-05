@@ -1,0 +1,11 @@
+<?php
+
+	$fname="Pradnya";
+	function test($fname) 
+	{
+		echo "$fname ".rand(6,15);
+	}
+
+	test($fname);
+
+?>
