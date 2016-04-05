@@ -3,7 +3,7 @@
 	$fname="Pradnya";
 	function test($name) 
 	{
-		echo "$fname ".rand(6,15);
+		echo "$name ".rand(6,15);
 	}
 
 	test($fname);
