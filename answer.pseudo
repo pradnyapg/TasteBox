@@ -1,11 +1,17 @@
-<?php
-
-	$fname="Pradnya";
-	function test($name) 
-	{
-		echo "$name ".rand(6,15);
-	}
-
-	test($fname);
-
-?>
+	<?php if (!empty($_POST)): ?>
+	 <?php echo htmlspecialchars($_POST["name"]).rand(6,15); ?>
+	
+	<?php else: ?>
+	<html>
+		<head>
+			<title>Using Form</title>
+		</head>
+		<form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+			<label>Enter Name:</label>
+			
+			<input type="text" name="name" id="name" pattern="^[A-z]+$" title="enter characters only" placeholde="Enter name" required>
+			//validation for name ,accepts only charater value and cannot be left blank
+			<input type="submit">
+		</form>
+	</html>
+	<?php endif; ?>
